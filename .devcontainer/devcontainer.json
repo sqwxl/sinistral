@@ -1,0 +1,25 @@
+{
+	"$schema": "https://github.com/devcontainers/spec/raw/refs/heads/main/schemas/devContainer.base.schema.json",
+
+	"build": {
+		"dockerfile": "./Containerfile"
+	},
+
+	"mounts": [
+		{
+			"source": "devcontainer-cargo-cache-${devcontainerId}",
+			"target": "/usr/local/cargo",
+			"type": "volume"
+		},
+		{
+			"type": "bind",
+			"source": "/home/nilueps/.config",
+			"target": "/home/sqwxl/.config"
+		},
+		{
+			"type": "bind",
+			"source": "/home/nilueps/.gitconfig",
+			"target": "/home/sqwxl/.gitconfig"
+		}
+	]
+}
